@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-
-export default function Form({}) {
+export default function Form({ addData }) {
     const initilValue = {
         name: '',
         age: '',
@@ -12,6 +11,7 @@ export default function Form({}) {
     const submitForm = (e) => {
         e.preventDefault()
         setData(initilValue)
+        addData(data)
     }
 
     return (

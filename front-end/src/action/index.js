@@ -1,4 +1,4 @@
-import {ADD_DATA, LOAD_PIE, LOAD_BAR , CATCH_ERROR} from './constant/action-type';
+import { LOAD_PIE, LOAD_BAR , CATCH_ERROR} from './constant/action-type';
 
 export function loadBarData(data)
 {
@@ -15,13 +15,7 @@ export function loadPieData(data)
         pie: data
     }
 }
-export function addData(data)
-{
-    return {
-        type: ADD_DATA,
-        dat: data
-    }
-}
+
 
 
 export function catchError(error) {

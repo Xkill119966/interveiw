@@ -101,7 +101,7 @@ app.get('/pie', async (req, res) => {
 
     res.status(200).json({
         Male: male,
-        Female : female
+        Female: female
     }
     )
 
@@ -109,8 +109,10 @@ app.get('/pie', async (req, res) => {
 
 // POST / chart => Create new row of record
 app.post('/chart', (req, res) => {
-    Chart.create({ note: req.body.note, tag: req.body.tag }).then(function (note) {
-        res.json(note);
+    console.log("Req" , req.body);
+    let { name, age, gender } = req.body
+    Chart.create({ name: name, age: Number(age), gender: gender }).then(function (data) {
+        res.status(201).json(data);
     });
 })
 

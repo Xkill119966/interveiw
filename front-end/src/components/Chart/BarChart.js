@@ -46,6 +46,13 @@ export default function BarChart({
           display: true,
           text: 'Bar Chart'
         },
+        scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero: true
+              }
+          }]
+      }
       }
     };
 
